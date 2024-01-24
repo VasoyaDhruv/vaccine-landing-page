@@ -67,20 +67,40 @@
 }
 .navbar-main-container ul{
   display:flex;
-  align-items: center;
   gap: 25px;
- margin: 0;
+  margin: 0;
 }
 .navbar-main-container ul a{
   font-size: 24px;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.50);
   font-weight: 500;
-  gap: 25px;
-  align-items: flex-start;
-  display: flex;
-  align-items: center;
   text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  transition: all 400ms ease;
+}
+.navbar-main-container ul a:hover{
+  color: #FFF;
+  font-weight: 500;
+}
+.navbar-main-container ul a:hover span{
+  display: block;
+}
+.navbar-main-container ul a span{
+  /* width: 10px;
+  height: 10px;
+  border-radius: 50%; */
+  background-color: var(--light-blue);
+  font-weight: bolder;
+  display: none;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -20px;
 }
 .menu-icon{
   background: rgba(196, 196, 196, 0.15);
@@ -101,7 +121,6 @@
   z-index: 10;
   margin: 0 auto;
   padding: 20px 15px;
-
   width: 90%;
   display: none;
 }
@@ -384,7 +403,7 @@
 }
 .result-check-box  input {
   width: 100%;
-  height: 69px;
+  padding: 20px 25px;
   border-radius: 20px;
   outline: none;
   font-size: 24px;
@@ -547,8 +566,13 @@
 .registration-form{
   display: flex;
   justify-content: space-between;
-  margin-top: 40px;
-  margin-bottom: 30px;
+  padding: 40px;
+  padding: 30px;
+}
+
+.registration-form-background{
+  background-image: url(./images/whitebackgroud.png);
+  background-size: cover;
 }
 
 .left-form-section .left-section-heading{
@@ -669,6 +693,7 @@
   justify-content: center;
   gap: 45px;
   padding-top: 40px ;
+  white-space: nowrap;
 }
 .left-form-section .last-options div:first-child{
   color: rgba(0, 0, 0, 0.50);
@@ -681,7 +706,7 @@
 
 
 .btn-dark-blue{
-    padding: 20px 25px ;
+    padding: 20px 70px;
     align-items: center;
     border-radius: 20px;
     font-size: 24px;
@@ -689,7 +714,6 @@
     font-weight: 700;
     border: 2px solid var(--light-blue);
     background: var(--light-blue);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     transition: 0.2s;
     white-space: nowrap;
     cursor: pointer;
@@ -697,6 +721,7 @@
 .btn-dark-blue:hover{
   border: 2px solid var(--dark-blue);
   background-color: var(--dark-blue);
+  box-shadow: 0px 4px 4px 0px rgba(40, 8, 8, 0.25);
 }
 
 .right-form-section{
@@ -737,11 +762,349 @@
   font-weight: 700;
   position: absolute;
   bottom: 80px;
-  left: 21%;
-  right: 20%;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%);
   cursor: pointer;
+  white-space: nowrap;
 }
 
+.symptoms-section{
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  padding-top: 67px;
+}
+.symptoms-section h3{
+  color: #FFF;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.symptoms-heading-section h2{
+  color: #17C2EC;
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+.symptoms-heading-section h2 span{
+  color: white;
+}
+.symptoms-heading-section p{
+  color: rgba(255, 255, 255, 0.50);
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  max-width: 65%;
+}
+
+.symptoms-heading-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ .symptoms-bottom-section{
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  position: relative;
+}
+.left-symptoms-cards{
+  display: flex;
+  flex-direction: column;
+  gap: 113px;
+  margin-bottom: 60px;
+  z-index: 1;
+}
+.left-symptoms-cards div{
+  display: flex;
+  position: relative;
+  border-radius: 10px;
+  background: rgba(196, 196, 196, 0.20);
+  padding: 23px 0;
+  padding-left: 30px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  width: fit-content;
+  max-width: 327px;
+  width: 100%;
+  justify-content: center;
+}
+.left-symptoms-cards div img{
+  position: absolute;
+  width: 100px;
+  top: -10px;
+  left: -16px;
+}
+
+.left-symptoms-cards div p{
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: #17C2EC;
+  white-space: nowrap;
+} 
+
+.left-symptoms-cards div:first-child{
+  transform: translateX(100px);
+}
+.left-symptoms-cards div:nth-child(2){
+  transform: translateX(50px);
+}
+.left-symptoms-cards div:nth-child(3){
+  transform: translateX(0px);
+}
+.symptoms-bottom-section img{
+  width: 708.419px;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+}
+
+.right-symptoms-cards{
+  display: flex;
+  flex-direction: column;
+  gap: 113px;
+  margin-bottom: 60px;
+  
+}
+  .right-symptoms-cards div{
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 10px;
+    background: rgba(196, 196, 196, 0.20);
+    padding: 23px 0;
+    padding-right: 20px;
+    padding-left: 30px;
+    max-width: 327px;
+    width: 100%;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    justify-content: center;
+  }
+.right-symptoms-cards div img{
+  position: absolute;
+  width: 100px;
+  left: -20px;
+}
+
+.right-symptoms-cards div p{
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: #17C2EC;
+  white-space: nowrap;
+} 
+.right-symptoms-cards div:first-child{
+  transform: translateX(-50px);
+}
+.right-symptoms-cards div:nth-child(2){
+  transform: translateX(-10px);
+}
+.right-symptoms-cards div:nth-child(3){
+  transform: translateX(40px);
+}
+
+
+.feedback-section{
+  padding-top: 57px;
+  padding-bottom: 321px;
+  position: relative;
+}
+.feedback-heading-section{
+   display: flex;
+   flex-direction: column;
+   align-items:  center;
+   margin-bottom: 100px;
+}
+.feedback-heading-section h3{
+  color: var(--light-blue);
+  font-size: 24px;
+  font-weight: 700;
+}
+.feedback-heading-section h2{
+  color: #000;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 800;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  white-space: nowrap;
+}
+.feedback-heading-section p{
+  max-width: 953px;
+  font-size: 24px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.50);
+}
+.feedback-cards{
+  display: flex;
+  gap: 45px;
+}
+.feedback-card{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 30px 30px;
+  border-radius: 20px;
+  background: rgba(196, 196, 196, 0.50);
+  position: relative;
+}
+.feedback-card .feedback-advisor{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.feedback-advisor div{
+  gap: 5px;
+}
+.feedback-advisor div h2{
+  color: #000;
+  font-size: 24px;
+  font-weight: 700;
+}
+.feedback-advisor div p{
+  color: rgba(0, 0, 0, 0.50);
+  font-size: 14px;
+  font-weight: 700;
+  max-width: 333px;
+  
+}
+
+.feedback-card .feedback-description{
+  font-size: 18px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.60);
+  text-align: center;
+  margin-bottom: 14px;
+}
+.feedback-card .feedback-description span{
+  color: var(--light-blue);
+}
+.feedback-card img:last-child{
+  position:absolute;
+  top: -160px;
+  z-index: -1;
+  left: 40px;
+}
+
+.quote-mail-box{
+  display: flex;
+  flex-direction: column;
+  padding-top: 70px;;
+  padding-bottom: 107px;
+  border-radius: 50px;
+  background: var(--light-blue);
+  margin: 0 auto;
+  max-width: 1031px;
+  width: 100%;
+  align-items: center;
+  position: absolute;
+  top: 45rem;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%);
+}
+
+.quote-mail-box h2{
+  color: #fff;
+  font-size: 48px;
+  font-weight: 700;
+}
+.quote-mail-box p{
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.quote-mail-box div{
+  display: flex;
+}
+.quote-mail-box div input{
+  border-radius: 30px 0px 0px 30px;
+  background: #FFF;
+  border: none;
+  padding: 28px 0;
+  padding-left: 40px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);
+  width: 450px;
+  font-size: 24px;
+  color: #000;
+  font-weight: 500;
+}
+.quote-mail-box div input:focus{
+  outline: none;
+}
+.quote-mail-box div input::placeholder{
+  color: rgba(0, 0, 0, 0.25);
+  font-size: 20px;
+  font-weight: 500;
+
+}
+.quote-mail-box div .sent-btn{
+  border-radius: 0px 30px 30px 0px;
+  background: var(--dark-blue);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);
+  padding: 18px 30px;
+  text-align: center;
+}
+.quote-mail-box-bg{
+  border-radius: 50px;
+  background: rgba(196, 196, 196, 0.15);
+  max-width: 1067px;
+  width: 100%;
+  height: 435px;
+  position: absolute;
+  top: 44.2rem;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%);
+}
+
+footer{
+  display: flex;
+  padding-top: 328px;
+  padding-bottom: 133px;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footer-heading div:first-child{
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+}
+.footer-tags{
+  display: flex;
+  gap: 25px;
+  padding: 0;
+}
+.footer-tags a{
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.50);
+  transition: all 400ms ease;
+}
+.footer-tags a:hover{
+  color: #FFF;
+  font-weight: 500;
+}
+
+.footer-icon-list{
+  display: flex;
+  gap: 10px;
+  padding: 0;
+}
+.footer-icon-list a{
+  text-decoration: none;
+}
+.footer-icon-list a svg{
+  width: 50px;
+  height: 50px;
+}
 
 /* Media Queries for Responsive Design */
 @media screen and (max-width:1100px) {
@@ -781,7 +1144,7 @@
         display: none;
         padding: 25px 33px;
         top: 0 ;
-        right: 0;
+        right: 35px;
       }
       .mobile-menu-container ul{
         display: flex;
@@ -810,7 +1173,6 @@
       }
       .hero-section-left .second-para{
         font-size: 36px;
-         
       }
       .hero-section-left .third-para{
         font-size: 20px;
@@ -847,15 +1209,22 @@
       .result-check-box input{
         font-size: 20px;
       }
+      .result-check-box .result-heading{
+        height: 55px;
+      }
       
       .result-check-box  input::placeholder{
         font-size: 20px    
       }
+      
 
       .result-search-section .check-btn{
         width: fit-content;
         padding: 20px 35px;
         font-size: 20px;
+      }
+      .result-certificate-link{
+        height: 50px;
       }
      .result-certificate-link div{
       font-size: 14px;
@@ -896,6 +1265,7 @@
      .read-more-btn{
       font-size: 14px;
      }
+
      .registration-form{
       flex-direction: column;
      }
@@ -904,7 +1274,7 @@
      }
      .registration-form  .mobile-heading{
       display: block;
-      font-size: 48px;
+      font-size: 36px;
       font-weight: 700;
       color: #000;
       margin-bottom: 40px;
@@ -914,16 +1284,152 @@
       display: none;
      }
      .right-form-section{
-      margin: 65px auto;
+      margin: 65px;
       order: 2;
      }
-     .left-section-heading{
-      order: 1;
-      width: 100%;
-      margin: 0 auto;
+     .left-form-section{
+      max-width: 100%;
      }
+     .left-form-section form .form-labels{
+      font-size: 20px;
+     }
+     .left-form-section form .fullname{
+      font-size: 20px;
+     }
+     .left-form-section form .fullname::placeholder{
+      font-size: 20px;
+    }
+    .phone-input-container input{
+      font-size: 20px;
+    }
+    .phone-input-container input::placeholder{
+      font-size: 20px;
+    }
+    .btn-dark-blue{
+      font-size: 20px;
+    }
+    .symptoms-section h3{
+      font-size: 20px;
+    }
+    .symptoms-heading-section h2{
+      font-size: 36px;
+    }
+   .symptoms-heading-section p{
+    font-size: 18px;
+    
+   }
+   .left-symptoms-cards{
+    gap: 58px;
+   }
+   .left-symptoms-cards div{
+    padding: 12px 0;
+    padding-left: 33px;
+    padding-right: 16px;
+   }
+   .left-symptoms-cards div img{
+       width: 65px;
+       left: 8%;
+       top: -8px;
+   }
+   .left-symptoms-cards div p{
+    font-size: 18px;
+   }
+   .right-symptoms-cards{
+    gap: 58px;
+   }
+   .right-symptoms-cards div{
+    padding: 12px 0;
+    padding-left: 33px;
+    padding-right: 16px;
+   }
+   .right-symptoms-cards div img{
+       width: 65px;
+       left: -8px;
+   }
+   .right-symptoms-cards div p{
+    font-size: 18px;
+   }
 
+   .symptoms-bottom-section img{
+    width: 460px;
+   }
+   /* ................................................ */
+   .feedback-section{
+    padding-top: 46px;
+    padding-bottom: 163px;
+   }
+
+   .feedback-heading-section{
+    margin-bottom:60px ;
+   }
+   .feedback-heading-section h3{
+    font-size: 20px;
+   }
+   .feedback-heading-section h2{
+    font-size: 36px;
+   }
+   .feedback-heading-section p{
+    font-size: 18px;
+   }
+   .feedback-cards{
+    gap:30px;
+    flex-direction: column;
+    align-items: center;
+   }
+   .feedback-card{
+    max-width: 400px;
+   }
+   .feedback-advisor div h2{
+    font-size: 20px;
+   }
+   .feedback-card img:last-child{
+    max-width: 173px;
+    top: -30px;
+    left: 110px;
+   }
+   .quote-mail-box{
+    padding-top: 16px;
+    padding-bottom: 56px;
+    max-width: 660px;
       }
+      .quote-mail-box h2{
+        font-size: 36px;
+      }
+      .quote-mail-box p{
+        font-size: 20px;
+      }
+      .quote-mail-box div input{
+        font-size: 20px;
+      }
+      .quote-mail-box{
+        top: 73.5rem;;
+      }
+      .quote-mail-box-bg{
+        max-width: 709px;
+        height: 320px;
+        width: 100%;
+        top: 72.4rem;
+      }
+      footer{
+        flex-direction: column;
+        padding-top: 270px;
+        padding-bottom: 50px;
+        gap: 50px;
+        align-items: flex-start;
+      }
+
+      footer .footer-heading div:first-child{
+        font-size: 26px;
+      }
+      .footer-tags a{
+        font-size: 20px;
+      }
+      .footer-icon-list a svg{
+        width: 31.448px;
+        height: 31.448px;
+      }
+    }
+
 @media only screen and (max-width: 768px) {
       .-container {
         width: 90%; /* Adjust width for smaller screens */
@@ -935,6 +1441,10 @@
       .main-image-component{
         top: 395px;
         right: 80px;
+      }
+      .mobile-menu-container .close-icon{
+        right: 23px;
+        top: -1px;
       }
 
       .protection-card{
@@ -983,6 +1493,66 @@
      .protection-card.active .read-more-btn{
        font-size: 14px;
      }
+     .form-phone-num{
+      flex-direction: column;
+      margin-bottom: 150px;
+     }
+     .form-phone-num button{
+      width: 50%;
+    }
+ 
+
+    .left-symptoms-cards{
+      gap: 58px;
+    }
+    .left-symptoms-cards div{
+      padding: 10px 0;
+      padding-right: 7px;
+      padding-left: 20px;
+      border-radius: 4.863px;
+      width: fit-content;
+    }
+    .left-symptoms-cards div img{
+      width: 45px;
+      left: -4px;
+      top: -3px;
+      
+    }
+    .left-symptoms-cards div p{
+      font-size: 12px;
+    }
+
+
+    .right-symptoms-cards{
+      gap: 58px;
+     
+    }
+    .right-symptoms-cards div{
+      padding: 10px 0;
+      padding-right: 7px;
+      padding-left: 20px;
+      border-radius: 4.863px;
+      width: fit-content;
+    }
+    .right-symptoms-cards div img{
+      width: 45px;
+      left: -4px;
+    
+    }
+    .right-symptoms-cards div p{
+      font-size: 12px;
+    }
+
+    .quote-mail-box{
+      max-width:90%;
+    }
+    .quote-mail-box-bg{
+      max-width: 95%;
+    }
+    .quote-mail-box div input{
+     width: 90%;
+    }
+    
     }
     
 @media only screen and (max-width: 480px) {
@@ -990,6 +1560,9 @@
         width: 90%; 
       }
 
+      .mobile-menu-container .close-icon{
+        right: 14px;
+      }
       .mobile-navbar .navbar-heading:first-child{
         font-size: 18px;
     }
@@ -1053,9 +1626,9 @@
       }
       .main-image-component{
         width: 100%;
-        padding: 0 150px;
+        padding: 0 0px;
         height: 69px;
-        right: -5px;
+        right: 40px;
         top: 243px 
       }
       .sub-main-image-component{
@@ -1065,7 +1638,7 @@
       .sub-specialists-info1{
         font-size: 14px;
      }
-      .sub-specialists-info1{
+      .sub-specialists-info2{
         font-size: 14px;
       }
       .sub-image-background2{
@@ -1103,13 +1676,16 @@
     }
     .result-check-box .result-heading{
       font-size: 10px;
-      padding: 14px 30px;
+      padding: 0px 30px;
+      height: 40px;
     }
     .status-check-container{
       padding: 0 13px;
     }
     .result-check-box input{
       font-size: 12px;
+      border-radius: 10px;
+      padding: 16px 17px;
     }
     .result-check-box input:focus{
       font-size: 12px;
@@ -1121,12 +1697,17 @@
 
     .result-search-section .check-btn{
       width: fit-content;
-      padding: 20px 35px;
+      padding: 16px 35px;
       font-size: 12px;
+      width: 50%;
+      border-radius: 10px;
     }
+    
    .result-certificate-link div{
     font-size: 10px;
     padding: 0 23px;
+    max-width: 280px;
+    text-align: center;
    }
    .card-heading{
     flex-direction: column;
@@ -1163,11 +1744,13 @@
     border-radius: 20px;
    }
    .pro-card-icon{
-    height: 70px;
-    width: 70px;
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
    }
    .pro-card-icon svg{
-    width: 30px;
+    width: 28.241px;
+    height: 30px;
    }
    .pro-card-heading{
     font-size: 14px;
@@ -1184,8 +1767,8 @@
     height: 280px;
    }
    .protection-card.active .pro-card-icon{
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
    }
  .protection-card.active .pro-card-heading{
    font-size: 14px;
@@ -1197,4 +1780,282 @@
  .protection-card.active .read-more-btn{
    font-size: 14px;
  }
+.registration-form .mobile-heading{
+  font-size: 24px;
+}
+.left-form-section{
+  width: 100%;
+  gap: 20px;
+}
+.left-form-section form .form-labels{
+  font-size: 14px;
+}
+.left-form-section form .fullname{
+  border-radius: 10px;
+  padding: 16px 20px;
+  font-size: 14px;
+}
+.left-form-section form .fullname::placeholder{
+  font-size: 14px;
+}
+.left-form-section form .form-para{
+  font-size: 14px;
+}
+.phone-input-container select{
+  font-size: 14px;
+  padding: 7px 20px;
+}
+.phone-input-container select:focus{
+  outline: none;
+}
+
+.phone-input-container{
+  gap: 5px;
+  border-radius: 10px;
+}
+.phone-input-container input{
+  font-size: 14px;
+  padding: 16px 1px;
+}
+.phone-input-container input::placeholder{
+  font-size: 14px;
+}
+.form-phone-num{
+ flex-direction: column;
+ margin-bottom: 60px;
+}
+.btn-dark-blue{
+  font-size: 14px;
+  border-radius: 10px;
+  align-items: center;
+  padding: 14px 0;
+}
+.form-phone-num button{
+  width: 50%;
+}
+
+.left-form-section .last-options{
+  font-size: 14px;
+  font-weight: 600;
+  padding-top: 20px;
+  
+}
+
+.right-form-section{
+  width: 289.028px;
+  height: 418.329px;
+  align-self: center;
+  margin-top: 40px;
+  border-radius: 15.212px;
+}
+.right-form-section .virus-img{
+  width: 75px;
+  top: -20px;
+  left: -20px;
+}
+.right-form-section .verify-status-heading{
+   font-size: 14px;
+}
+.right-form-section .verify-status-btn{
+  padding: 16px 53px;
+  font-size: 14px;
+  bottom: 50px;
+}
+.symptoms-section{
+  padding-top: 25px;
+  gap: 30px;
+}
+.symptoms-section h3{
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.symptoms-heading-section h2{
+  font-size: 25px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+.symptoms-heading-section p{
+  font-size: 12px;
+  padding: 0 40px;
+  max-width: 100%;
+}
+.symptoms-bottom-section img{
+  width: 222px;
+  position: absolute;
+  bottom: 0;
+}
+.left-symptoms-cards{
+  gap: 22px;
+  margin-bottom: 40px;
+}
+.left-symptoms-cards div{
+  padding: 6px 0;
+  padding-right: 7px;
+  padding-left: 20px;
+  border-radius: 4.863px;
+  width: fit-content;
+}
+.left-symptoms-cards div img{
+  width: 32px;
+  left: 0px;
+  top: -5px;
+  
+}
+.left-symptoms-cards div p{
+  font-size: 9px;
+}
+.left-symptoms-cards div:first-child{
+  transform: translateX(40px);
+}
+.left-symptoms-cards div:nth-child(2){
+  transform: translateX(20px);
+}
+.left-symptoms-cards div:nth-child(3){
+  transform: translateX(0px);
+}
+
+.right-symptoms-cards{
+  gap: 22px;
+  margin-bottom: 40px;
+}
+.right-symptoms-cards div{
+  padding: 6px 0;
+  padding-right: 7px;
+  padding-left: 20px;
+  border-radius: 4.863px;
+  width: fit-content;
+}
+.right-symptoms-cards div img{
+  width: 32px;
+  left: 0px;
+  top: -5px;
+}
+.right-symptoms-cards div p{
+  font-size: 9px;
+}
+.right-symptoms-cards div:first-child{
+  transform: translateX(-20px);
+}
+.right-symptoms-cards div:nth-child(2){
+  transform: translateX(0px);
+}
+.right-symptoms-cards div:first-child(3){
+  transform: translateX(0px);
+}
+
+.feedback-section{
+  padding: 30px;
+  padding-bottom: 158px;
+}
+.feedback-heading-section{
+  margin-bottom: 16px;
+}
+.feedback-heading-section h3{
+  font-size: 14px;
+}
+.feedback-heading-section h2{
+  font-size: 24px;
+  margin-bottom: 10px;
+
+}
+.feedback-heading-section p{
+  max-width: 245px;
+  font-size: 12px;
+}
+.feedback-cards{
+  gap: 30px;
+}
+.feedback-card{
+  gap: 30px;
+  padding: 23px 23px;
+  border-radius: 15.28px;
+}
+.feedback-card .feedback-advisor{
+  gap: 15px;
+}
+.feedback-advisor div{
+  gap: 4px;
+}
+.feedback-advisor img{
+  width: 53.375px;
+  height: 53.375px;
+}
+.feedback-advisor div h2{
+  color: #000;
+  font-size: 13.5px;
+  font-weight: 700;
+}
+.feedback-advisor div p{
+  max-width: 253px;
+  font-size: 9.5px;
+}
+.feedback-card .feedback-description{
+  font-size: 12px;
+}
+.feedback-card img:last-child{
+ width: 125px;
+ top: -20px;
+ left: 85px;
+}
+.quote-mail-box{
+  padding-top: 16px;
+  padding-bottom: 28px;
+  border-radius: 10px;
+  max-width: 280px;
+  top: 55rem;
+}
+.quote-mail-box h2{
+  font-size: 18px;
+}
+.quote-mail-box p{
+  font-size: 10px;
+  margin-top: 5px;
+  margin-bottom: 24px;
+}
+.quote-mail-box div input{
+  border-radius: 20px 0px 0px 20px;
+  padding: 14px 0;
+  padding-left: 13px;
+  width: 174.75px;
+  font-size: 10px;
+}
+.quote-mail-box div input::placeholder{
+  font-size: 10px;
+}
+.quote-mail-box div .sent-btn{
+  border-radius: 0px 20px 20px 0px;
+  padding: 10px 12px;
+}
+.quote-mail-box-bg{
+  width: 305px;
+  height: 206px;
+  border-radius: 20px;
+  top: 53.3rem;
+}
+.quote-mail-box div .sent-btn svg{
+  width: 23.3px;
+  width: 23.3px;
+  height: 20px;
+}
+footer{
+  padding-top: 133px;
+  padding-bottom: 30px;
+}
+footer .footer-heading div:first-child{
+ font-size: 18px; 
+}
+.footer-tags{
+  gap: 10px;
+  flex-direction: column;
+}
+.footer-tags a{
+  font-size: 14px;
+}
+.footer-icon-list{
+  gap: 4px;
+}
+.footer-icon-list a svg{
+  width: 17.873px;
+height: 17.873px;
+}
 }
