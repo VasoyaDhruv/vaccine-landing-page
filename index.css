@@ -154,6 +154,11 @@
   font-size: 24px;
   font-weight: 700;
   white-space: nowrap;
+  transition: all 400ms ease;
+}
+.navbar-main-container .check-status-button:hover{
+  background: var(--light-blue);
+  color: white;
 }
   .hero-section{
     padding-top: 210px;
@@ -628,7 +633,7 @@
 
 .phone-input-container{
   display: flex;
-  gap: 30px;
+  gap: 10px;
   width: 100%;
   align-items: center;
 }
@@ -641,6 +646,12 @@
   font-size: 24px;
   font-weight: 500;
 }
+.phone-input-container select option{
+  background: var(--dark-blue);
+  color: white;
+  gap: 10px;
+}
+
 
 .vertical-line{
   height: 40px;
@@ -672,7 +683,7 @@
 
 .form-phone-num{
   display: flex;
-  gap: 36px;
+  gap: 20px;
   height: 70px;
   justify-content: space-between;
  
@@ -950,6 +961,11 @@
   border-radius: 20px;
   background: rgba(196, 196, 196, 0.50);
   position: relative;
+  transition: all 400ms ease;
+}
+.feedback-card:hover{
+  background:var(--light-blue);
+  box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.25);
 }
 .feedback-card .feedback-advisor{
   display: flex;
@@ -959,17 +975,25 @@
 .feedback-advisor div{
   gap: 5px;
 }
+.feedback-card:hover div h2{
+  color: white;
+}
 .feedback-advisor div h2{
   color: #000;
   font-size: 24px;
   font-weight: 700;
+  transition: all 200ms ease;
 }
+
 .feedback-advisor div p{
   color: rgba(0, 0, 0, 0.50);
   font-size: 14px;
   font-weight: 700;
   max-width: 333px;
-  
+  transition: all 200ms ease;
+}
+.feedback-card:hover div p{
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .feedback-card .feedback-description{
@@ -978,9 +1002,17 @@
   color: rgba(0, 0, 0, 0.60);
   text-align: center;
   margin-bottom: 14px;
+  transition: all 200ms ease;
+}
+.feedback-card:hover .feedback-description{
+  color: rgba(255, 255, 255, 0.75);
 }
 .feedback-card .feedback-description span{
   color: var(--light-blue);
+}
+.feedback-card:hover .feedback-description span{
+  color: white;
+  transition: all 200ms ease;
 }
 .feedback-card img:last-child{
   position:absolute;
