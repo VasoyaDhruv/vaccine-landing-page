@@ -372,7 +372,6 @@
 
 .result-section-container{
   padding: 60px 0;
-  
 }
 .result-check-box{
   width: 100%;
@@ -1328,7 +1327,7 @@ footer .footer-heading div:first-child{
    }
    .left-symptoms-cards div img{
        width: 65px;
-       left: 8%;
+       left: 0px;
        top: -8px;
    }
    .left-symptoms-cards div p{
@@ -1568,21 +1567,33 @@ footer .footer-heading div:first-child{
     }
       .btn-blue{
         font-size: 14px;
+        border-radius: 10px;
       }
       .hero-section{
         gap: 50px;
-        padding-top: 150px;
+        padding-top: 127px;
       }
   
+      .hero-section-left{
+        gap: 20px;
+        max-width: 100%;
+      }
+      .hero-section-left .get-help-btn{
+         justify-content: center;
+      }
+
       .hero-section-left .first-para{
         font-size: 12px;
       }
       .hero-section-left .second-para{
-        font-size: 14px;
+        font-size: 24px;
       }
-
       .hero-section-left .third-para{
-        font-size: 20px;
+        font-size: 14px;
+        margin-bottom: 20px;
+      }
+      .btn-blue{
+        border-radius: 20px;
       }
       .mobile-navbar .menu-icon img{
         width: 30px;
@@ -1595,9 +1606,12 @@ footer .footer-heading div:first-child{
       .mobile-menu-container ul{
         align-items: flex-start;
       }
+      .mobile-menu-container .close-icon{
+        right: 10px;
+        top: 1px;
+      }
       .mobile-menu-container .close-icon img{
         width: 30px;
-        height: 30px;
       }
       
       .main-big-image{
@@ -1610,9 +1624,11 @@ footer .footer-heading div:first-child{
         top: 120px;
       }
       .sub-image-background1 img{
-       
         height: 32.695px;
-        align-self: center;
+        width: 40px;
+        left: 50%;
+        right: 50%;
+        transform: translateX(-10%);
       }
       .sub-image-background2{
         height: 50px;
@@ -1621,8 +1637,10 @@ footer .footer-heading div:first-child{
       }
       .sub-image-background2 img{
         height: 32.695px;
+        left: 50%;
+        right: 50%;
+        transform: translateX(-4%);
         
-        align-items:flex-start;
       }
       .main-image-component{
         width: 100%;
@@ -1654,6 +1672,14 @@ footer .footer-heading div:first-child{
      .info-bar-graytext{
        font-size: 14px;
      }
+     .icon-bg{
+       width: 29.977px;
+       height: 30px;
+       border-radius: 10px;
+     }
+     .icon-bg svg{
+      height: 20px;
+     }
      .schedule-info-bar .schedule-bar{
       justify-content: start;
       padding: 20px 10px;
@@ -1670,9 +1696,15 @@ footer .footer-heading div:first-child{
      .label div img{
       width: 100px;
      }
+     .result-section-container{
+      padding-top: 80px;
+      padding-bottom: 32px;
+     }
      
      .result-search-section{
       flex-direction: column;
+      margin-top: 21px;
+      margin-bottom: 48px;
     }
     .result-check-box .result-heading{
       font-size: 10px;
@@ -1830,6 +1862,9 @@ footer .footer-heading div:first-child{
   align-items: center;
   padding: 14px 0;
 }
+.btn-dark-blue:hover{
+  border-radius: 10px;
+}
 .form-phone-num button{
   width: 50%;
 }
@@ -1838,7 +1873,13 @@ footer .footer-heading div:first-child{
   font-size: 14px;
   font-weight: 600;
   padding-top: 20px;
-  
+  gap: 20px;
+  justify-content: space-between;
+}
+.registration-form{
+  padding: 0;
+  padding-top: 35px;
+  padding-bottom: 41px;
 }
 
 .right-form-section{
@@ -1928,16 +1969,16 @@ footer .footer-heading div:first-child{
 .right-symptoms-cards div img{
   width: 32px;
   left: 0px;
-  top: -5px;
+  top: -4px;
 }
 .right-symptoms-cards div p{
   font-size: 9px;
 }
 .right-symptoms-cards div:first-child{
-  transform: translateX(-20px);
+  transform: translateX(-5px);
 }
 .right-symptoms-cards div:nth-child(2){
-  transform: translateX(0px);
+  transform: translateX(12px);
 }
 .right-symptoms-cards div:first-child(3){
   transform: translateX(0px);
