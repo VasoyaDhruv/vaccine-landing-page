@@ -40,17 +40,35 @@ for (let i = 0; i < protectionCards.length; i++) {
 function sendEmail() {
     const to = document.getElementById('user-mail').value;
     console.log(to)
-
     Email.send({
         Host : "smtp.elasticemail.com",
         Username : "soulrega857@gmail.com",
-        Password : "93388CFB5FE345BB3A9BB5EE753AC71B3B95",
-        To : to,
-        From : "soulrega857@gmail.com",
+        Password : "A39DA59F0854623916D4D5974417FBCBCA71",
+        To : "soulrega857@gmail.com",
+        From : to,
         Subject : "This is testing mail",
         Body : "And this is your mail" + to,
     }).then(
-      message => alert(message)
+      message => {
+        if(message == "OK"){
+            Swal.fire({
+                position: "top",
+                icon: "success",
+                title: "Mail sent successfully",
+                showConfirmButton: false,
+                timer: 1500
+              });
+        }
+        else{
+            Swal.fire({
+                position: "top",
+                icon: "error",
+                title: "something went wrong",
+                showConfirmButton: false,
+                timer: 1500
+              });
+        }
+      }
     );
 
 } 
