@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <title>vaccination</title>
   </head>
   <body >
@@ -498,8 +499,8 @@
     <p>Please do enter your email address below</p>
 
     <div>
-      <input type="email" placeholder="lenux.ng@gmail.com">
-      <div class="sent-btn">
+      <input type="email" id="user-mail" placeholder="lenux.ng@gmail.com">
+      <div class="sent-btn" onclick=sendEmail()>
         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
           <path d="M36.6667 3.3335L18.3333 21.6668" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M36.6667 3.33301L25 36.6663L18.3333 21.6663L3.33334 14.9997L36.6667 3.33301Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
