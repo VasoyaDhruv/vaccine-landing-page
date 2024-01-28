@@ -36,3 +36,21 @@ for (let i = 0; i < protectionCards.length; i++) {
         this.classList.remove('active');
     });
 }
+
+function sendEmail() {
+    const to = document.getElementById('user-mail').value;
+    console.log(to)
+
+    Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "soulrega857@gmail.com",
+        Password : "93388CFB5FE345BB3A9BB5EE753AC71B3B95",
+        To : to,
+        From : "soulrega857@gmail.com",
+        Subject : "This is testing mail",
+        Body : "And this is your mail" + to,
+    }).then(
+      message => alert(message)
+    );
+
+} 
